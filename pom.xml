@@ -8,7 +8,7 @@
     <groupId>com.example</groupId>
     <artifactId>springapp1</artifactId>
     <version>1.0.0</version>
-    <packaging>war</packaging> <!-- WAR packaging for Tomcat -->
+    <packaging>war</packaging>
 
     <name>Spring Boot WAR Deployment</name>
     <description>Spring Boot application packaged as WAR and deployable to Tomcat</description>
@@ -17,11 +17,11 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.2.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <properties>
-        <java.version>17</java.version> <!-- Match your JDK -->
+        <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
@@ -50,16 +50,17 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope> <!-- Provided because Tomcat will be external -->
+            <scope>provided</scope>
         </dependency>
 
-        <!-- JSTL if you plan to use JSP -->
+        <!-- JSTL for JSP support -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
+            <version>1.2</version>
         </dependency>
 
-        <!-- Lombok (optional, for reducing boilerplate code) -->
+        <!-- Lombok (optional) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -77,16 +78,14 @@
     <build>
         <finalName>springapp1</finalName>
         <plugins>
-            <!-- Spring Boot Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <skip>true</skip> <!-- skip repackage for WAR -->
+                    <skip>true</skip>
                 </configuration>
             </plugin>
 
-            <!-- WAR Packaging -->
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>

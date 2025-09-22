@@ -1,13 +1,12 @@
-package com.example.demo;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 @SpringBootApplication
-public class FoodApplication {
+public class FoodApplication extends SpringBootServletInitializer {
 
-	public static void main(String[] args) {
-		SpringApplication.run(FoodApplication.class, args);
-	}
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(FoodApplication.class);
+    }
 
+    public static void main(String[] args) {
+        SpringApplication.run(FoodApplication.class, args);
+    }
 }

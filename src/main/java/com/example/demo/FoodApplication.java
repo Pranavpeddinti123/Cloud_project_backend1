@@ -2,8 +2,8 @@
 public class FoodApplication extends SpringBootServletInitializer {
 
     @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(FoodApplication.class);
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(FoodApplication.class);
     }
 
     public static void main(String[] args) {

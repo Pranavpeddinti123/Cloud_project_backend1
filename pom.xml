@@ -16,7 +16,7 @@
     <groupId>com.example</groupId>
     <artifactId>springapp1</artifactId>
     <version>1.0.0</version>
-    <packaging>war</packaging>
+  
 
     <properties>
         <java.version>17</java.version>

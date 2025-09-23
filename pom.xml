@@ -8,7 +8,7 @@
     <groupId>com.example</groupId>
     <artifactId>springapp1</artifactId>
     <version>1.0.0</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <name>Spring Boot WAR Deployment</name>
     <description>Spring Boot application packaged as WAR and deployable to Tomcat</description>
